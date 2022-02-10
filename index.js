@@ -22,4 +22,25 @@ let agesFind = duplicateFind(ages, (val) => {
   return val > 18;
 });
 
-console.log(agesFind);
+// console.log(agesFind);
+
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"]
+let  duplicateIndexOf = (val, arr) => {
+  for(let i = 0; i < arr.length; i++){
+      if((val) == arr[i]){
+          return i
+      }
+  }
+
+}
+
+console.log(duplicateIndexOf("Banana", fruits))
+
+
+
+
+
+
+let index = fruits.indexOf("Apple")
+// console.log(index)
