@@ -49,6 +49,27 @@
     <br />
 
     <fieldset>
+      <legend>Search Employee</legend>
+      <label for="searchName">Employee Name:</label>
+      <input type="text" id="searchName" name="searchName" />
+      <br />
+      <br />
+      <label for="searchOccupation">Occupation</label>
+      <select id="searchOccupation">
+        <option value="">All Occupations</option>
+        <option>Software Developer</option>
+        <option>UI/UX</option>
+        <option>Digital Marketer</option>
+        <option>Data Scientist</option>
+      </select>
+      <br />
+      <br />
+      <button onclick="searchEmployees()">Search Employee</button>
+    </fieldset>
+
+    <br>
+    
+    <fieldset>
       <legend>Sort Employee</legend>
       <label for="searchOccupation">Order</label>
       <select id="searchOccupation">
@@ -137,6 +158,21 @@
       };
 
       renderData(employeeDatabase);
+
+      const searchEmployees = () => {
+        let searchEmployeeNameValue = document.getElementById("searchName").value
+        let searchEmployeeOccupationValue = document.getElementById("searchOccupation").value
+
+        let filteredData = employeeDatabase.filter((val) => {
+          return val.fullName.toLowerCase().includes(searchEmployeeNameValue.toLowerCase()) && 
+            val.occupation.toLowerCase().includes(searchEmployeeOccupationValue.toLowerCase())
+        })
+
+        renderData(filteredData)
+      }
+
+      const employeeDatabaseCopy = [...employeeDatabase]
+      const sortEmployeeByName
     </script>
   </body>
 </html>
