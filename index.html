@@ -47,7 +47,7 @@
     </fieldset>
 
     <br />
-    
+
     <fieldset>
       <legend>Sort Employee</legend>
       <label for="searchOccupation">Order</label>
@@ -61,10 +61,10 @@
       <button>Sort Employee By Age</button>
       <button>Reset Sort</button>
     </fieldset>
-    
+
     <br />
     <br />
-    
+
     <table>
       <caption>
         Employee Database
@@ -137,26 +137,6 @@
       };
 
       renderData(employeeDatabase);
-
-      const searchEmployees = () => {
-        let searchEmployeeNameValue =
-          document.getElementById("searchName").value;
-        let searchEmployeeOccupationValue =
-          document.getElementById("searchOccupation").value;
-
-        let filteredData = employeeDatabase.filter((val) => {
-          return (
-            val.fullName
-              .toLowerCase()
-              .includes(searchEmployeeNameValue.toLowerCase()) &&
-            val.occupation
-              .toLowerCase()
-              .includes(searchEmployeeOccupationValue.toLowerCase())
-          );
-        });
-
-        renderData(filteredData);
-      };
     </script>
   </body>
 </html>
