@@ -32,7 +32,8 @@ let  duplicateIndexOf = (val, arr) => {
           return i
       }
   }
-
+  
+  return -1
 }
 
 console.log(duplicateIndexOf("Banana", fruits))
