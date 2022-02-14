@@ -45,3 +45,15 @@ console.log(duplicateIndexOf("Banana", fruits))
 
 let index = fruits.indexOf("Apple")
 // console.log(index)
+
+const age = [7, 1, 3, 2, 5, 8, 3]
+
+// const copyFruits = [...fruits]
+
+// copyFruits.sort()
+// console.log(copyFruits)
+
+ages.sort((a, b) => {
+    return a-b
+})
+console.log(ages)
